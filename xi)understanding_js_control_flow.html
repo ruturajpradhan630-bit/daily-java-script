@@ -1,0 +1,58 @@
+<script>
+    //default flow of control in JavaScript is sequential, which means that the statements are executed one after another in the order they are written. However, there are certain control flow statements that allow you to change the flow of execution based on certain conditions or loops.
+    let a = 10;
+    if (a > 5) {
+        console.log("a is greater than 5");
+    } else {
+        console.log("a is less than or equal to 5");
+    }
+    //for loop repetition control flow statement
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+    }
+    //while loop repetition control flow statement
+    let j = 0;
+    while (j < 5) {
+        console.log(j);
+        j++;
+    }
+    //do while loop repetition control flow statement
+    let k = 0;
+    do {
+        console.log(k);
+        k++;
+    } while (k < 5);
+    //for jump statement control flow statement 
+    for (let i = 0; i < 5; i++) {
+        if (i === 3) {
+            break; // when the value of i is 3, the loop will terminate and exit the loop.
+        }
+        console.log(i);
+    }  
+    //continue statement is used to skip the current iteration of the loop and move to the next iteration.
+    for (let i = 0; i < 5; i++) {
+        if (i === 3) {
+            continue; // when the value of i is 3, the loop will skip the current iteration and move to the next iteration.
+        }
+        console.log(i);
+    }
+    //return statement is used to exit a function and return a value from the function.
+    function add(a, b) {
+        return a + b; // when the function is called, it will return the sum of a and b.
+    }
+    console.log(add(5, 10));
+    
+    console.log("and");
+    //throw statement is used to throw an exception and terminate the current function.
+    function divide(a, b) {
+        if (b === 0) {
+            throw new Error("Division by zero is not allowed"); // when the value of b is 0, the function will throw an exception and terminate the current function.
+        }
+        return a / b;
+    }
+    try {
+        console.log(divide(10, 0));
+    } catch (e) {
+        console.log(e.message);
+    }
+</script>

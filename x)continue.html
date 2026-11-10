@@ -1,0 +1,22 @@
+<script>
+    // continue statement is used to skip the current iteration of the loop and move to the next iteration.
+
+    // continue in loop
+    let b = ["rutu", "sagar", "pratik", "snehal", "shubham"];
+    for (let i = 0; i < b.length; i++) {
+        if (b[i] === "pratik") {
+            continue; // when the value of b[i] is "pratik", the loop will skip the current iteration and move to the next iteration.
+        }
+        console.log(b[i]);
+    }
+    //in while loop
+    let j = 0;
+    while (j < b.length) {
+        if (b[j] === "snehal") {    
+            j++;
+            continue; // when the value of b[j] is "snehal", the loop will skip the current iteration and move to the next iteration.
+        }
+        console.log(b[j]);
+        j++;
+    }
+</script>

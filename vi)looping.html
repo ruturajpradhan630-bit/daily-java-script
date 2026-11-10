@@ -1,0 +1,27 @@
+<script>
+
+    // there are some type of loops in javascript, but the most common are for and while loops.
+
+    let a =["rutu", "sagar", "pratik", "snehal", "shubham"];
+    for (let i = 0; i < a.length; i++) {
+        console.log(a[i]);
+    }
+    //loop scope
+    var i = 0;
+    while (i < a.length) {
+        console.log(a[i]);
+        i++;
+    }
+    // or
+    console.log("or");
+
+    var i = 5;
+    for(let i = 0; i < a.length; i++) {
+        console.log(a[i]);
+    }
+
+    // using let in for loop, the variable i is block scoped, so it will not affect the outer variable i.
+    console.log(i); // 5
+
+    //but reminder 'var' can be redeclared and updated, so it will affect the outer variable i but 'let' can not be redeclared and updated, so it will not affect the outer variable i.
+</script>
