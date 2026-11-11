@@ -1,0 +1,158 @@
+<script>
+
+  
+    let text = "Hello, World!";// here we store the string "Hello, World!" in the variable text
+    console.log(text.length); // Output: 13
+    
+    // we cam use single quotes or double quotes to define a string in JavaScript. Both are valid and can be used interchangeably.
+    let singleQuoteString = 'This is a string with single quotes';
+    let doubleQuoteString = "This is a string with double quotes";
+    console.log(singleQuoteString);
+    console.log(doubleQuoteString);
+
+    // we can use backticks to define a string in JavaScript. Backticks allow us to use template literals, which are strings that can contain expressions and variables.
+    let name = "John";
+    let templateLiteralString = `Hello, ${name}!`; // here we use backticks and the ${} syntax to insert the value of the variable name into the string
+    console.log(templateLiteralString); // Output: Hello, John!
+
+    // we can use string methods to manipulate strings in JavaScript. Some common string methods are:
+    let str = "Hello, World!";
+    console.log(str.toUpperCase()); // Output: HELLO, WORLD!
+    console.log(str.toLowerCase()); // Output: hello, world!
+    console.log(str.indexOf("World")); // Output: 7
+    console.log(str.slice(0, 5)); // Output: Hello
+    console.log(str.replace("World", "JavaScript")); // Output: Hello, JavaScript
+
+    // we can use string concatenation to combine strings in JavaScript. We can use the + operator or the += operator to concatenate strings.
+    let str1 = "Hello, ";
+    let str2 = "World!";
+    let concatenatedString = str1 + str2; // here we use the + operator to concatenate str1 and str2
+    console.log(concatenatedString); // Output: Hello, World!
+    str1 += str2; // here we use the += operator to concatenate str2 to str1
+    console.log(str1); // Output: Hello, World!
+
+    //srings are immutable in JavaScript, which means that once a string is created, it cannot be changed. However, we can create a new string by manipulating the original string using string methods or concatenation.
+    let originalString = "Hello, World!";
+    let newString = originalString.toUpperCase(); // create a new string by converting the original string to uppercase
+    console.log(newString); // Output: HELLO, WORLD!
+    console.log(originalString); // Output: Hello, World! (the original string is unchanged)
+
+    // we can use escape characters to include special characters in strings in JavaScript. Some common escape characters are:
+    let escapeString = "This is a string with a newline character\nand a tab character\t.";
+    console.log(escapeString); // Output: This is a string with a newline character
+    //and a tab character	.
+
+    //basic string methods in JavaScript
+    let str3 = "Hello, World!";
+    console.log(str3.charAt(0)); // Output: H
+    console.log(str3.charCodeAt(0)); // Output: 72
+    console.log(str3.concat(" How are you?")); // Output: Hello, World! How are you?
+    console.log(str3.endsWith("World!")); // Output: true
+    console.log(str3.startsWith("Hello")); // Output: true
+
+    //methods are written in camelCase, which means that the first word is lowercase and the first letter of each subsequent word is capitalized. For example, charAt() and charCodeAt() are written in camelCase.
+
+    //string at method is used to get the character at a specific index in a string. The index starts at 0 for the first character, 1 for the second character, and so on. We can also use negative indices to get characters from the end of the string, where -1 is the last character, -2 is the second last character, and so on.
+    let str4 = "Hello, World!";
+    console.log(str4.at(0)); // Output: H
+    console.log(str4.at(-1)); // Output: !  
+
+    //property access is used to get the character at a specific index in a string using bracket notation. The index starts at 0 for the first character, 1 for the second character, and so on. We can also use negative indices to get characters from the end of the string, where -1 is the last character, -2 is the second last character, and so on.
+    let str5 = "Hello, World!";
+    console.log(str5[0]); // Output: H
+    console.log(str5[-1]); // Output: undefined (negative indices are not supported in property access)
+
+    //sloppy mode is a mode in JavaScript that allows us to write code without strict rules. In sloppy mode, we can use undeclared variables, duplicate parameter names, and other features that are not allowed in strict mode. However, sloppy mode can lead to unexpected behavior and bugs in our code, so it is recommended to use strict mode instead.
+    //strict mode is a mode in JavaScript that enforces strict rules and prevents certain features that can lead to unexpected behavior and bugs in our code. In strict mode, we cannot use unde
+//clared variables, duplicate parameter names, and other features that are not allowed in sloppy mode. We can enable strict mode by adding the "use strict" directive at the beginning of our code or function.   
+    //example of sloppy mode
+    x = 10; // undeclared variable
+    console.log(x); // Output: 10 (no error is thrown)
+    //example of strict mode
+    //"use strict";
+    y = 20; // undeclared variable
+    console.log(y); // Output: Uncaught ReferenceError: y is not defined (error
+    
+
+    // use concat() method to concatenate two or more strings in JavaScript. The concat() method returns a new string that is the combination of the original strings.
+    let str6 = "Hello, ";
+    let str7 = "World!";
+    let concatenatedString2 = str6.concat(str7); // here we use the concat() method to concatenate str6 and str7
+    console.log(concatenatedString2);
+
+    // use includes() method to check if a string contains a specific substring in JavaScript. The includes() method returns true if the substring is found in the string, and false otherwise.
+    let str8 = "Hello, World!";
+    console.log(str8.includes("World")); // Output: true
+    console.log(str8.includes("JavaScript")); // Output: false
+
+    //string slice() method is used to extract a portion of a string and return it as a new string. The slice() method takes two arguments: the starting index and the ending index (optional). The starting index is inclusive, while the ending index is exclusive. If the ending index is not provided, the slice() method will extract the substring from the starting index to the end of the string.
+    let str9 = "Hello, World!";
+    console.log(str9.slice(0, 5)); // Output: Hello
+    console.log(str9.slice(7)); // Output: World!
+    
+    //string substring() method is used to extract a portion of a string and return it as a new string. The substring() method takes two arguments: the starting index and the ending index (optional). The starting index is inclusive, while the ending index is exclusive. If the ending index is not provided, the substring() method will extract the substring from the starting index to the end of the string.
+    let str10 = "Hello, World!";
+    console.log(str10.substring(0, 5)); // Output: Hello
+    console.log(str10.substring(7)); // Output: World!
+    //the main difference between slice() and substring() methods is that slice() can accept negative indices, while substring() cannot. Negative indices in slice() count from the end of the string, while in substring(), negative indices are treated as 0.
+
+    //string iswell-formed is a property that indicates whether a string is well-formed or not. A well-formed string is a string that does not contain any unpaired surrogate code units. In JavaScript, strings are represented using UTF-16 encoding, which uses pairs of 16-bit code units to represent characters outside the Basic Multilingual Plane (BMP). If a string contains an unpaired surrogate code unit, it is considered not well-formed.
+    let str11 = "Hello, World!";
+    console.log(str11.isWellFormed()); // Output: true
+
+    //string trimstart() method is used to remove whitespace characters from the beginning of a string. The trimStart() method returns a new string with the leading whitespace removed.
+    let str12 = "   Hello, World!   ";
+    console.log(str12.trimStart()); // Output: "Hello, World!   "
+    //string trimend() method is used to remove whitespace characters from the end of a string. The trimEnd() method returns a new string with the trailing whitespace removed.
+    let str13 = "   Hello, World!   ";
+    console.log(str13.trimEnd()); // Output: "   Hello, World!"
+
+    //string trim() method is used to remove whitespace characters from both the beginning and the end of a string. The trim() method returns a new string with the leading and trailing whitespace removed.
+    let str14 = "   Hello, World!   ";
+    console.log(str14.trim()); // Output: "Hello, World!"
+
+    //string toString() method is used to convert a string object to a string primitive. The toString() method returns a string representation of the string object.
+    let str15 = new String("Hello, World!");
+    console.log(str15.toString()); // Output: "Hello, World!"
+
+    //string valueOf() method is used to get the primitive value of a string object. The valueOf() method returns the primitive value of the string object.
+    let str16 = new String("Hello, World!");
+    console.log(str16.valueOf()); // Output: "Hello, World!"
+
+    //string fromCharCode() method is used to create a string from a sequence of Unicode values. The fromCharCode() method takes one or more Unicode values as arguments and returns a string that represents the corresponding characters.
+    let str17 = String.fromCharCode(72, 101, 108, 108, 111); // here we use the fromCharCode() method to create a string from the Unicode values of the characters "H", "e", "l", "l", and "o"
+    console.log(str17); // Output: "Hello"
+
+    //string serch() method is used to search for a specific substring in a string and return the index of the first occurrence of the substring. The search() method takes a regular expression or a string as an argument and returns the index of the first match, or -1 if no match is found.
+    let str18 = "Hello, World!";
+    console.log(str18.search("World")); // Output: 7
+
+    //string indexOf() method is used to search for a specific substring in a string and return the index of the first occurrence of the substring. The indexOf() method takes a string as an argument and returns the index of the first match, or -1 if no match is found.
+    let str19 = "Hello, World!";
+    console.log(str19.indexOf("World")); // Output: 7
+
+    //string lastIndexOf() method is used to search for a specific substring in a string and return the index of the last occurrence of the substring. The lastIndexOf() method takes a string as an argument and returns the index of the last match, or -1 if no match is found.
+    let str20 = "Hello, World! Hello, JavaScript!";     
+    console.log(str20.lastIndexOf("Hello")); // Output: 13
+
+    //string match() method is used to search for a specific substring in a string and return an array of all matches. The match() method takes a regular expression or a string as an argument and returns an array of all matches, or null if no match is found.
+    let str21 = "Hello, World! Hello, JavaScript!";
+    console.log(str21.match(/Hello/g)); // Output: ["Hello", "Hello"]   
+
+    //string replace() method is used to replace a specific substring in a string with another substring. The replace() method takes two arguments: the substring to be replaced and the substring to replace it with. The replace() method returns a new string with the specified replacements.
+    let str22 = "Hello, World!";
+    console.log(str22.replace("World", "JavaScript")); // Output: "Hello, JavaScript!"
+
+    //string split() method is used to split a string into an array of substrings based on a specified separator. The split() method takes a string or a regular expression as an argument and returns an array of substrings.
+    let str23 = "Hello, World!";
+    console.log(str23.split(", ")); // Output: ["Hello", "World!"]
+
+    // string matchAll() method is used to search for all occurrences of a specific substring in a string and return an iterator of all matches. The matchAll() method takes a regular expression as an argument and returns an iterator of all matches, or an empty iterator if no match is found.
+    let str24 = "Hello, World! Hello, JavaScript!";
+    let matches = str24.matchAll(/Hello/g); // here we use the matchAll() method to search for all occurrences of the substring "Hello" in str24
+    for (const match of matches) {
+        console.log(match[0]); // Output: "Hello" (the first match)
+    }   
+
+    // those are some of the basic string methods in JavaScript. There are many more string methods available in JavaScript that can be used to manipulate strings in various ways.
+</script>
