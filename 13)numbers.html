@@ -1,0 +1,152 @@
+<script>
+
+    //we are using numbers to create a simple calculator that can perform basic arithmetic operations like addition, subtraction, multiplication, and division. The user will input two numbers and select the desired operation from a dropdown menu. The result will be displayed on the screen after the calculation is performed.
+    let num= 10;
+    console.log(num);
+
+    //string variable to store a number as a string
+    let str= "10";
+    console.log(str);
+
+    //adding numbers and strings
+    let result= num + str;
+    console.log(result); //output will be "1010" because the number is converted to
+
+    // string and concatenated with the string variable
+    console.log("Result: " + result);
+
+    //performing arithmetic operations
+    let num1= 20;
+    let num2= 5;
+    let sum= num1 + num2;
+    console.log("Sum: " + sum); //output will be 25 
+
+    //basic methods to perform in java script
+    //tostring() method to convert a number to a string
+    let num3= 30;
+    let str2= num3.toString();
+    console.log(str2); //output will be "30"
+
+    //toexponential() method to convert a number to exponential notation
+    let num4= 1000;
+    let exp= num4.toExponential();
+    console.log(exp); //output will be "1e+3"
+
+    //tofixed() method to format a number with a fixed number of decimal places
+    let num5= 3.14159;
+    let fixed= num5.toFixed(2);
+    console.log(fixed); //output will be "3.14"
+
+    //toPrecision() method to format a number with a specified number of significant digits
+    let num6= 123.456789;
+    let precision= num6.toPrecision(4);
+    console.log(precision); //output will be "123.5"
+
+    //valueof() method to return the primitive value of a number
+    let num7= 50;
+    let value= num7.valueOf();
+    console.log(value); //output will be 50
+
+    //parseInt() method to convert a string to an integer
+    let str3= "100";
+    let int= parseInt(str3);
+    console.log(int); //output will be 100
+//if the string contains a decimal point, parseInt() will only return the integer part of the number
+// it will ignore the decimal part and return only the whole number
+//NaN (Not a Number) is a special value that indicates that a value is not a valid number. It is returned when a mathematical operation or function cannot produce a valid number. For example, if you try to divide a number by zero, the result will be NaN.
+
+
+    //number() method to convert a string to a number
+    let str4= "200";
+    let num8= Number(str4); 
+
+    //output will be 200
+    console.log(num8);
+
+    //number.isfinite() method to check if a value is a finite number
+    let num9= 100;
+    let isFinite= Number.isFinite(num9);
+    console.log(isFinite); //output will be true
+
+    //number.isnan() method to check if a value is NaN
+    let num10= 0/0;
+    let isNaN= Number.isNaN(num10);
+    console.log(isNaN); //output will be true
+
+    //number.parseFloat() method to convert a string to a floating-point number
+    let str5= "3.14";
+    let float= Number.parseFloat(str5);
+    console.log(float); //output will be 3.14
+
+    //number.parseInt() method to convert a string to an integer
+    let str6= "42";
+    let int2= Number.parseInt(str6);
+    console.log(int2); //output will be 42
+
+    //different properties of numbers in javascript
+    //Number.MAX_VALUE property returns the largest positive representable number
+    let maxValue= Number.MAX_VALUE;
+    console.log(maxValue); //output will be 1.7976931348623157
+
+    //Number.MIN_VALUE property returns the smallest positive representable number
+    let minValue= Number.MIN_VALUE;
+    console.log(minValue); //output will be 5e-324
+
+    //Number.POSITIVE_INFINITY property returns the positive infinity value
+    let posInfinity= Number.POSITIVE_INFINITY;
+    console.log(posInfinity); //output will be Infinity
+
+    //Number.NEGATIVE_INFINITY property returns the negative infinity value
+    let negInfinity= Number.NEGATIVE_INFINITY;
+    console.log(negInfinity); //output will be -Infinity
+
+    //Number.NaN property returns the NaN value
+    let nanValue= Number.NaN;
+    console.log(nanValue); //output will be NaN
+
+    //Number.EPSILON property returns the difference between 1 and the smallest value greater than 1 that can be represented as a Number
+    let epsilonValue= Number.EPSILON;
+    console.log(epsilonValue); //output will be 2.220446049250313
+
+    //Number.MAX_SAFE_INTEGER property returns the maximum safe integer value
+    let maxSafeInt= Number.MAX_SAFE_INTEGER;    
+
+    //output will be 9007199254740991
+    console.log(maxSafeInt);
+
+    //Number.MIN_SAFE_INTEGER property returns the minimum safe integer value
+    let minSafeInt= Number.MIN_SAFE_INTEGER;
+    console.log(minSafeInt); //output will be -9007199254740991
+
+    //Number.isInteger() method to check if a value is an integer
+    let num11= 10;
+    let isInteger= Number.isInteger(num11);
+    console.log(isInteger); //output will be true
+
+    //Number.isSafeInteger() method to check if a value is a safe integer
+    let num12= 9007199254740991;
+    let isSafeInteger= Number.isSafeInteger(num12);
+    console.log(isSafeInteger); //output will be true
+
+    //java script math object is a built-in object that provides properties and methods for performing mathematical operations. It includes constants like PI and E, as well as methods for performing calculations like rounding, trigonometry, and logarithms. The Math object is not a constructor, so you cannot create instances of it. Instead, you can use its properties and methods directly.
+    //Math.PI property returns the value of PI
+    let piValue= Math.PI;
+    console.log(piValue); //output will be 3.141592653589793
+
+    //bitwise operators in javascript are used to perform operations on binary representations of numbers. They operate on the individual bits of the numbers, allowing for efficient manipulation of data at the bit level. The main bitwise operators in JavaScript include AND (&), OR (|), XOR (^), NOT (~), left shift (<<), right shift (>>), and unsigned right shift (>>>). These operators can be useful for tasks such as setting, clearing, or toggling specific bits in a number, as well as for performing low-level optimizations in certain algorithms.
+
+
+
+    //javascript biglnt is a built-in object that provides a way to represent and manipulate large integers beyond the range of the Number type. It allows for precise calculations with arbitrarily large integers, making it suitable for applications that require high-precision arithmetic, such as cryptography or scientific computations. BigInt can be created by appending "n" to an integer literal or by using the BigInt() constructor. It supports various arithmetic operations, comparisons, and methods for working with large integers.
+    //example of using BigInt
+    let bigInt1= 1234567890123456789012345678901234567890n;
+    let bigInt2= BigInt("9876543210987654321098765432109876543210");
+    let bigIntSum= bigInt1 + bigInt2;
+    console.log(bigIntSum); //output will be 111111111011111111
+
+    //example of using BigInt with arithmetic operations
+    let bigIntProduct= bigInt1 * bigInt2;
+    console.log(bigIntProduct); //output will be 1219326311126352690000000000000000000000n  
+
+
+    </script>
